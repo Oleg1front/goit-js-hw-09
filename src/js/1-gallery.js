@@ -1,3 +1,5 @@
+import SimpleLightbox from 'simplelightbox';
+
 const images = [
   {
     preview:
@@ -85,7 +87,6 @@ const createImage = () => {
     const createImg = document.createElement('img');
     createImg.classList.add('gallery-image');
     createImg.src = img.preview;
-    createImg.dataset.source = img.original;
     createImg.alt = img.description;
     createLink.appendChild(createImg);
     imagesArray.push(createLi);
