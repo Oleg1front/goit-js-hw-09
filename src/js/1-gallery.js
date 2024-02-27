@@ -1,5 +1,4 @@
 import simpleLightbox from 'simplelightbox';
-import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
@@ -98,6 +97,4 @@ const createImage = () => {
 };
 createImage();
 
-const lightbox = new simpleLightbox('.gallery a', {
-    
-});
+const lightbox = new simpleLightbox('.gallery a', {});
