@@ -97,4 +97,6 @@ const createImage = () => {
 };
 createImage();
 
-const lightbox = new simpleLightbox('.gallery a', {});
+const lightbox = new simpleLightbox('.gallery a');
+
+lightbox;
