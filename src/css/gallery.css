@@ -25,10 +25,10 @@
   color: white;
 }
 
-img {
+li {
   transition: all 200ms;
 }
 
-img:hover {
+li:hover {
   scale: 1.02;
 }
