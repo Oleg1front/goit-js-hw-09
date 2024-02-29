@@ -97,6 +97,9 @@ const createImage = () => {
 };
 createImage();
 
-const lightbox = new simpleLightbox('.gallery a');
+const lightbox = new simpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionsDelay: 250,
+});
 
-lightbox;
+lightbox.options;
