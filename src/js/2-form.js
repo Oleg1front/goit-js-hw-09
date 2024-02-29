@@ -1,19 +1,12 @@
 const form = document.querySelector('.feedback-form');
 const emailInput = form.elements.email;
 const messageInput = form.elements.message;
-const userData = {
-  email: '',
-  message: '',
-};
 const localStorageKey = 'feedback-form-state';
+let userData = JSON.parse(localStorage.getItem(localStorageKey)) ?? {};
 
 form.addEventListener('input', event => {
   const target = event.target;
-  if (target.tagName === 'INPUT') {
-    userData.email = target.value;
-  } else {
-    userData.message = target.value;
-  }
+  userData[target.name] = target.value;
   localStorage.setItem('localStorageKey', JSON.stringify(userData));
 });
 
@@ -31,6 +24,7 @@ fillFields();
 form.addEventListener('submit', event => {
   event.preventDefault();
   form.reset();
-  localStorage.clear();
+  localStorage.removeItem('localStorageKey');
   console.log(userData);
+  userData = {};
 });
