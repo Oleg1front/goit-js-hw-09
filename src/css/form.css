@@ -61,15 +61,19 @@ button {
   transition: all 250ms;
   cursor: pointer;
 }
-
-button:hover{
-    background-color: #6C8CFF;
+textarea {
+  outline: none;
+}
+button:hover {
+  background-color: #6c8cff;
 }
 
-input:hover, textarea:hover {
-    border: 1px solid black;
+input:hover,
+textarea:hover {
+  border: 1px solid black;
 }
 
-input:active, textarea:active{
-    border: 1px solid grey
+input:active,
+textarea:active {
+  border: 1px solid grey;
 }
